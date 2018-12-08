@@ -2,7 +2,7 @@
 	<div>
 		<div class="title">热销推荐</div>
 		<ul>
-			<li class="item" v-for="item of recommendList" :key="item.id">
+			<li class="item" v-for="item of list" :key="item.id">
 				<div class="item-img-wrapper">
 					<img class="item-img" :src="item.imgUrl" />
 				</div>
@@ -19,40 +19,8 @@
 <script>
 export default {
 	name: 'HomeRecommend',
-	data () {
-		return {
-			recommendList: [{
-				id: '0001',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-				title: '故宫',
-				desc: '海淀区'
-			}, {
-				id: '0002',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1711/53/53f7752ece875d00a3.img.jpg_200x200_5c006913.jpg',
-				title: '龙脉温泉',
-				desc: '昌平区'
-			}, {
-				id: '0003',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/e4/e48857f2ce5e53a7a3.img.jpg_200x200_8ee069fe.jpg',
-				title: '远去的恐龙',
-				desc: '朝阳区'
-			}, {
-				id: '0004',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/67/67feeab24cfc82bb90.water.jpg_200x200_af2a01b1.jpg',
-				title: '太平洋海底世界',
-				desc: '海淀区'
-			}, {
-				id: '0005',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/43/dea8b51719a4a69b68777baa68c146e4.water.jpg_200x200_8da8cebe.jpg',
-				title: '春晖园温泉度假村春晖园温泉度假村',
-				desc: '顺义区'
-			}, {
-				id: '0006',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg',
-				title: '八达岭长城',
-				desc: '延庆县'
-			}]
-		}	
+	props: {
+		list: Array
 	}
 }
 </script>
